@@ -1,13 +1,5 @@
 import json
 import math
-import re
-
-def write (d):
-    fw = open('written.txt','w', encoding = 'UTF-8')
-    for wrd in d:
-        for elem in wrd:
-            fw.write(elem + '\n')
-    fw.close()
 
 def load_data():
     size = {}
@@ -30,7 +22,6 @@ def load_data():
                                     
                     size[name] = seats
                     loc[name] = coord
-    #print(size)
         
     get_biggest_bar(size)
     get_closest_bar(loc)
